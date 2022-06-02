@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    dbname: testdb
+    username: sa
+    password:
+    url: jdbc:h2:mem:testdb
+  h2:
+    console:
+      enabled: true
+  http:
+    log-request-details: true
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          r2dbc: DEBUG
+        web:
+          reactive:
+            function:
+              client:
+                ExchangeFunctions: TRACE
